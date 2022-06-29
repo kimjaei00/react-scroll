@@ -2,7 +2,7 @@ import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import Video from '../../videos/video.mp4'
 import { VideoBg, HeroContainer, HeroBg,HeroContent,HeroH1,HeroP,HeroWrapper,ArrowForward,ArrowRight} from './HeroElements'
-
+import { Button } from '../ButtonElements'
 const HeroSection = () => {
   const [hover,setHover]=useState(false)
   const onHover=()=>{
@@ -19,7 +19,9 @@ const HeroSection = () => {
             Sign up for a new accoun today and receive $250 in credit towards your next payment.
           </HeroP>
           <HeroWrapper>
-            <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}>
+            <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}
+            primary='true' dark='true'
+            >
               Get Started {hover ? <ArrowForward /> : <ArrowRight/>}
             </Button>
           </HeroWrapper>
